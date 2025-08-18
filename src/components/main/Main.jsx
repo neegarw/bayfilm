@@ -23,7 +23,7 @@ function Main() {
                 </div>
             </div>
             <div className='py-[15px] md:py-[25px] lg:py-[45px]'>
-                <button className='lg:text-[40px] md:text-[30px] text-[20px] capitalize border-[2px] border-[#fff6c3] text-[#ff5e00] w-full rounded-[80px] py-[10px] flex items-center justify-center hover:text-[#fff6c3] transition ease-in-out duration-300'>GET IN TOUCH</button>
+                <Link to="/contact" className='lg:text-[40px] md:text-[30px] text-[20px] capitalize border-[2px] border-[#fff6c3] text-[#ff5e00] w-full rounded-[80px] py-[10px] flex items-center justify-center hover:text-[#fff6c3] transition ease-in-out duration-300'>GET IN TOUCH</Link>
             </div>
         </div>
     )

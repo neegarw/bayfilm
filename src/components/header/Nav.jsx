@@ -55,9 +55,16 @@ function Nav({ setScrollToAbout }) {
 
                 {/* Sidebar Links */}
                 <ul className="flex flex-col gap-6 mt-16 ml-6 text-lg">
-                    <li className="cursor-pointer hover:text-gray-400">ABOUT</li>
-                    <li className="cursor-pointer hover:text-gray-400">GALLERY</li>
-                    <li className="cursor-pointer hover:text-gray-400">CONTACT</li>
+                    <Link
+                        onClick={() => {
+                            document.getElementById("about")?.scrollIntoView({
+                                behavior: "smooth"
+                            });
+                            setSidebarOpen(false);
+                        }}
+                        className="cursor-pointer">ABOUT</Link>
+                    <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
+                    <Link to="/contact" className="cursor-pointer">CONTACT</Link>
                 </ul>
             </div>
 

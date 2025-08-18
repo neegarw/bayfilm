@@ -45,9 +45,16 @@ function Header() {
                 </div>
 
                 <ul className="flex flex-col gap-6 pl-6 text-[24px] font-[700] capitalize">
-                    <li className="cursor-pointer">ABOUT</li>
-                    <li className="cursor-pointer">GALLERY</li>
-                    <li className="cursor-pointer">CONTACT</li>
+                    <Link
+                        onClick={() => {
+                            document.getElementById("about")?.scrollIntoView({
+                                behavior: "smooth"
+                            });
+                            setSidebarOpen(false);
+                        }}
+                        className="cursor-pointer">ABOUT</Link>
+                    <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
+                    <Link to="/contact" className="cursor-pointer">CONTACT</Link>
                 </ul>
             </div>
 
