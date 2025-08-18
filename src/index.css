@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Manrope", sans-serif;
+
+}
+
+body h1 {
+  font-family: "Bebas Neue", sans-serif;
+}
