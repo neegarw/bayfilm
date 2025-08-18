@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
+import { HiMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 function Nav({ setScrollToAbout }) {
@@ -10,7 +11,7 @@ function Nav({ setScrollToAbout }) {
             {/* Header */}
             <nav className="flex items-center justify-between w-full py-4 bg-transparent text-[#FFF6C3] px-4 md:px-[100px]">
                 {/* Logo */}
-                <div className="flex-1">
+                <div className="">
                     <Link to="/" className="text-[30px] md:text-[48px] font-bold">
                         <h1>BAYFLIM</h1>
                     </Link>
@@ -20,7 +21,7 @@ function Nav({ setScrollToAbout }) {
                 <ul className="hidden md:flex flex-1 justify-end gap-10 md:gap-20 text-lg font-medium">
                     <Link
                         to="/#about"
-                        onClick={() => setSidebarOpen(false)} // mobil menyunu bağlamaq üçün
+                        onClick={() => setSidebarOpen(false)} 
                         className="cursor-pointer"
                     >
                         ABOUT
@@ -35,7 +36,7 @@ function Nav({ setScrollToAbout }) {
                     className="md:hidden text-3xl"
                     onClick={() => setSidebarOpen(true)}
                 >
-                    <FiMenu />
+                    <HiMenuAlt3 />
                 </button>
             </nav>
 
@@ -56,12 +57,8 @@ function Nav({ setScrollToAbout }) {
                 {/* Sidebar Links */}
                 <ul className="flex flex-col gap-6 mt-16 ml-6 text-lg">
                     <Link
-                        onClick={() => {
-                            document.getElementById("about")?.scrollIntoView({
-                                behavior: "smooth"
-                            });
-                            setSidebarOpen(false);
-                        }}
+                        to="/#about"
+                        onClick={() => setSidebarOpen(false)} 
                         className="cursor-pointer">ABOUT</Link>
                     <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
                     <Link to="/contact" className="cursor-pointer">CONTACT</Link>

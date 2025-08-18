@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import bg from "../../assets/imgs/bg.jpg";
+import bg from "../../assets/imgs/bg.webp";
 import { Link } from "react-router-dom";
 
 function Header() {

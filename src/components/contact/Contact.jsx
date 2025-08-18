@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom"
 import contactPhoto from "../../assets/imgs/contactPhoto.jpg";
+import Nav from "../header/Nav";
 
 function Contact() {
 
     return (
         <div className="bg-[#191919] h-screen flex flex-col justify-between">
-            <header className="py-[20px] px-4 md:px-[100px] flex items-start">
-                <Link to="/" className="text-[32px] md:text-[72px] font-bold uppercase text-[#FFF6C3]">Bayfilm</Link>
-            </header>
+            <Nav />
             <main className="px-4 md:px-[100px] w-full min-[600px]:flex min-[600px]:gap-[10%] min-[600px]:iteams-center ">
                 <div className="w-full min-[600px]:w-[calc(90%/2)] flex flex-col gap-[15px] items-start">
                     <p className="text-[#FF5E00] font-[500] text-[25px]">Bayfilm@Gmail.Com</p>
