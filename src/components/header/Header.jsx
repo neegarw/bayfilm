@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import bg from "../../assets/imgs/bg.jpg";
+import { Link } from "react-router-dom";
 
 function Header() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -10,11 +11,21 @@ function Header() {
         >
             <nav className="text-[#fff6c3] flex flex-row  md:flex-col items-center md:items-start justify-between md:justify-start px-6 py-6 md:pl-[80px]">
                 <ul className="hidden md:flex gap-[24px] text-[24px] font-[700] capitalize">
-                    <li className="cursor-pointer">ABOUT</li>
-                    <li className="cursor-pointer">GALLERY</li>
+                    <li
+                        className="cursor-pointer"
+                        onClick={() => {
+                            document.getElementById("about")?.scrollIntoView({
+                                behavior: "smooth"
+                            });
+                            setSidebarOpen(false); // mobil menü açıqdırsa bağlansın
+                        }}
+                    >
+                        ABOUT
+                    </li>
+                    <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
                     <li className="cursor-pointer">CONTACT</li>
                 </ul>
-                <h1 className="text-[32px] md:text-[72px] font-bold pl-[5px]">BAYFILM</h1>
+                <Link to="/" className="text-[32px] md:text-[72px] font-bold pl-[5px]">BAYFILM</Link>
 
                 <div className="md:hidden">
                     <button onClick={() => setSidebarOpen(true)}>
