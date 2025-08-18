@@ -17,7 +17,7 @@ function Header() {
                             document.getElementById("about")?.scrollIntoView({
                                 behavior: "smooth"
                             });
-                            setSidebarOpen(false); // mobil menü açıqdırsa bağlansın
+                            setSidebarOpen(false);
                         }}
                     >
                         ABOUT
@@ -25,7 +25,7 @@ function Header() {
                     <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
                     <Link to='/contact' className="cursor-pointer">CONTACT</Link>
                 </ul>
-                <Link to="/" className="text-[32px] md:text-[72px] font-bold pl-[5px]">BAYFILM</Link>
+                <Link to="/" className="text-[32px] md:text-[72px] font-bold pl-[5px]"><h1>BAYFILM</h1></Link>
 
                 <div className="md:hidden">
                     <button onClick={() => setSidebarOpen(true)}>
