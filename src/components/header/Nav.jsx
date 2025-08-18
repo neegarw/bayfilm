@@ -19,14 +19,15 @@ function Nav({ setScrollToAbout }) {
                 {/* Menu */}
                 <ul className="hidden md:flex flex-1 justify-end gap-10 md:gap-20 text-lg font-medium">
                     <Link
-                        to="/"
-                        onClick={() => setScrollToAbout(true)} // scroll etmək üçün state
+                        to="/#about"
+                        onClick={() => setSidebarOpen(false)} // mobil menyunu bağlamaq üçün
                         className="cursor-pointer"
                     >
                         ABOUT
                     </Link>
-                    <li className="cursor-pointer">GALLERY</li>
-                    <li className="cursor-pointer">CONTACT</li>
+
+                    <Link to='/gallery' className="cursor-pointer">GALLERY</Link>
+                    <Link to='/contact' className="cursor-pointer">CONTACT</Link>
                 </ul>
 
                 {/* Mobile Menu Button */}

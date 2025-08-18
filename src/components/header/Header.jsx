@@ -23,7 +23,7 @@ function Header() {
                         ABOUT
                     </li>
                     <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
-                    <li className="cursor-pointer">CONTACT</li>
+                    <Link to='/contact' className="cursor-pointer">CONTACT</Link>
                 </ul>
                 <Link to="/" className="text-[32px] md:text-[72px] font-bold pl-[5px]">BAYFILM</Link>
 
