@@ -17,7 +17,7 @@ function Contact() {
                             name="name" 
                             type="text" 
                             placeholder="Your Name"
-                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[3px] p-[10px] border-[#FF5E00]"
+                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[1px] md:border-[3px] p-[10px] border-[#FF5E00]"
                             />
                         </div>
                         <div className='w-full flex flex-col gap-[5px]'>
@@ -26,7 +26,7 @@ function Contact() {
                             name="email" 
                             type="email" 
                             placeholder="Your Email"
-                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[3px] p-[10px] border-[#FF5E00]"
+                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[1px] md:border-[3px] p-[10px] border-[#FF5E00]"
                             />
                         </div>
                         <div className='w-full flex flex-col gap-[5px]'>
@@ -35,7 +35,7 @@ function Contact() {
                             name="subject" 
                             type="text" 
                             placeholder="Enter the subject"
-                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[3px] p-[10px] border-[#FF5E00]"
+                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[1px] md:border-[3px] p-[10px] border-[#FF5E00]"
                             />
                         </div>
                         <div className='w-full flex flex-col gap-[5px]'>
@@ -43,7 +43,7 @@ function Contact() {
                             <textarea 
                             name="message" 
                             placeholder="Enter your message"
-                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[3px] p-[10px] border-[#FF5E00]">
+                            className="w-full outline-none text-[#FFF6C3] text-[14px] rounded-[12px] border-[1px] md:border-[3px] p-[10px] border-[#FF5E00]">
                             </textarea>
                         </div>
                         <button type="submit" className="h-[48px] w-[98px] rounded-[8px] text-[18px] font-[500] bg-[#FF5E00] text-white">Send</button>

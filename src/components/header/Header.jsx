@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import bg from "../../assets/imgs/bg.webp";
 import { Link } from "react-router-dom";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 function Header() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -29,7 +30,7 @@ function Header() {
 
                 <div className="md:hidden">
                     <button onClick={() => setSidebarOpen(true)}>
-                        <FiMenu className="text-3xl text-[#fff6c3]" />
+                        <HiMenuAlt3  className="text-3xl text-[#fff6c3]" />
                     </button>
                 </div>
             </nav>
