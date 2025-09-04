@@ -2,7 +2,7 @@
 function Footer() {
     return (
         <>
-            <footer className="px-4 md:px-[100px] text-[#FF5E00] bg-[#191919] py-[30px]">
+            <footer className="px-4 md:px-[100px] text-[#FF5E00] bg-[#191919] pt-[30px] pb-[70px]">
                 <h4 className="py-2">2024-by Bayram Musayev. All rights reserved</h4>
                 <div className="flex items-end justify-between text-[]">
                     <div>
@@ -33,7 +33,6 @@ function Footer() {
                         </a>
                     </div>
                 </div>
-
             </footer>
         </>
     )

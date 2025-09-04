@@ -21,7 +21,6 @@ function App() {
     }
   }, [pathname]);
 
-
   return (
     <div>
       <Routes>
