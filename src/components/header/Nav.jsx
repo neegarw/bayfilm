@@ -27,7 +27,7 @@ function Nav({ setScrollToAbout }) {
                         ABOUT
                     </Link>
 
-                    <Link to='/gallery' className="cursor-pointer">GALLERY</Link>
+                    <Link to='/category' className="cursor-pointer">GALLERY</Link>
                     <Link to='/contact' className="cursor-pointer">CONTACT</Link>
                 </ul>
 
@@ -60,7 +60,7 @@ function Nav({ setScrollToAbout }) {
                         to="/#about"
                         onClick={() => setSidebarOpen(false)} 
                         className="cursor-pointer">ABOUT</Link>
-                    <Link to="/gallery" className="cursor-pointer">GALLERY</Link>
+                    <Link to="/category" className="cursor-pointer">GALLERY</Link>
                     <Link to="/contact" className="cursor-pointer">CONTACT</Link>
                 </ul>
             </div>
