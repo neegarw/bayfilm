@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "plyr-react/plyr.css" ;
+
 
 body {
   font-family: "Manrope", sans-serif;

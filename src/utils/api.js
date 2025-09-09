@@ -8,9 +8,9 @@ async function getCategory() {
     const res = await axiosInstance.get('/category')
     return res
 }
-async function getGallery() {
-    const res = await axiosInstance.get('/galery')
-    return res
+async function getGallery(id) {
+    const res = await axiosInstance.get('/galery/' + id)
+    return res.data
 }
 export {
     getLanding, getCategory, getGallery
