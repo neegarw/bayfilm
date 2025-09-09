@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
-import bg from "../../assets/imgs/bg.webp";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { getLanding } from "../../utils/api";
