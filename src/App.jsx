@@ -31,7 +31,6 @@ function App() {
           <Route index element={<GalleryCategory />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/galery" element={<Gallery />} /> */}
         <Route path="/galery/:id" element={<Gallery />} />
       </Routes>
     </div>

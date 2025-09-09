@@ -12,11 +12,12 @@ function GalleryCategory() {
 
     return (
         <>
-            <div className="">
+            <div className="absolute top-0 left-0 w-full">
+
                 {data.map((item) => (
-                    <Link 
-                        key={item.id} 
-                        to={`/galery/${item.id}`} 
+                    <Link
+                        key={item.id}
+                        to={`/galery/${item.id}`}
                         style={{ backgroundImage: `url(${axiosInstance.defaults.baseURL}${item.image})` }}
                         className="md:h-[600px] h-[50vh] w-full bg-cover bg-center flex items-center justify-center text-[#FFF7C9] text-[40px] md:text-[80px]"
                     >

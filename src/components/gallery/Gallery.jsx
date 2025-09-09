@@ -13,26 +13,28 @@ function Gallery() {
     const [data, setData] = useState([]);
     const { id } = useParams();
 
+    console.log(data);
+
     useEffect(() => {
         getGallery(id).then((res) => setData(res));
     }, [id])
 
     return (
         <>
-            <div className="bg-[#0b0b0b] px-4 md:px-[50px] lg:px-[100px] w-full ">
-                <Nav />
+        <Nav />
+            <div className="bg-[#0b0b0b] px-4 md:px-[50px] lg:px-[100px] w-full absolute top-0 left-0 py-[100px]">
                 <div className="px-4 md:px-[50px] lg:px-[100px] flex flex-wrap gap-[24px] py-[50px]">
                     {
                         data?.map((item, index) => (
                             item.type === 'ONE' ? <OneImg key={index} {...item} />
                                 : item.type === 'TREE' ?
-                                    <ThreeImg key={index} data={item.images} />
+                                    <ThreeImg key={index} {...item} />
                                     : item.type === 'FULL' ?
-                                        <FullImg key={index} data={item.images} /> :
+                                        <FullImg key={index} {...item} /> :
                                         item.type === 'VIDEO' ?
-                                            <VideoPlayer key={index} data={item.images} /> :
+                                            <VideoPlayer key={index} {...item} /> :
                                             item.type === 'GRID' ?
-                                                <GridImg key={index} data={item.images}/> : null
+                                                <GridImg key={index} {...item} /> : null
                         ))
                     }
                 </div>
