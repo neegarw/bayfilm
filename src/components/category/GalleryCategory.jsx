@@ -17,10 +17,10 @@ function GalleryCategory() {
                     <Link 
                         key={item.id} 
                         to={`/galery/${item.id}`} 
-                        style={{ backgroundImage: `url(${axiosInstance.defaults.baseURL}${item.title})` }}
+                        style={{ backgroundImage: `url(${axiosInstance.defaults.baseURL}${item.image})` }}
                         className="md:h-[600px] h-[50vh] w-full bg-cover bg-center flex items-center justify-center text-[#FFF7C9] text-[40px] md:text-[80px]"
                     >
-                        <h3>{item.image}</h3>
+                        <h3>{item.title}</h3>
                     </Link>
                 ))}
             </div>
