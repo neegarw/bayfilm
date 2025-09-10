@@ -5,23 +5,11 @@ import { Link } from "react-router-dom";
 
 function Nav({ setScrollToAbout }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const handleScrollToAbout = () => {
-        const aboutSection = document.getElementById("about");
-        if (aboutSection) {
-            const yOffset = -100; // header-in real hündürlüyü, məsələn 100px
-            const y = aboutSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: "smooth" });
-        } else {
-            // Landing page-də deyilsə home page-ə yönləndir
-            window.location.href = "/#about";
-        }
-    };
-
 
     return (
         <>
             {/* Header */}
-            <nav className="flex z-20 items-center relative top-0 left-0 justify-between w-full py-4 bg-transparent text-[#FFF6C3] px-4 md:px-[100px]">
+            <nav className="flex items-center justify-between w-full py-4 bg-transparent text-[#FFF6C3] px-4 md:px-[100px]">
                 {/* Logo */}
                 <div className="">
                     <Link to="/" className="text-[30px] md:text-[48px] font-bold">
@@ -32,13 +20,16 @@ function Nav({ setScrollToAbout }) {
                 {/* Menu */}
                 <ul className="hidden md:flex flex-1 justify-end gap-10 md:gap-20 text-lg font-medium">
                     <Link
-                        className="cursor-pointer"
+                        to="/#about"
                         onClick={() => {
-                            handleScrollToAbout();
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                            setSidebarOpen(false);
                         }}
+                        className="cursor-pointer"
                     >
                         ABOUT
                     </Link>
+
                     <Link to='/category' className="cursor-pointer">GALLERY</Link>
                     <Link to='/contact' className="cursor-pointer">CONTACT</Link>
                 </ul>
@@ -69,22 +60,12 @@ function Nav({ setScrollToAbout }) {
                 {/* Sidebar Links */}
                 <ul className="flex flex-col gap-6 mt-16 ml-6 text-lg">
                     <Link
-                        className="cursor-pointer"
+                        to="/#about"
                         onClick={() => {
-                            if (setScrollToAbout) {
-                                const aboutSection = document.getElementById("about");
-                                aboutSection?.scrollIntoView({ behavior: "smooth" });
-                            } else {
-                                // Landing page-də deyilsə home page-ə yönləndir
-                                window.location.href = "/#about";
-                            }
+                            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
                             setSidebarOpen(false);
                         }}
-                    >
-                        ABOUT
-                    </Link>
-
-
+                        className="cursor-pointer">ABOUT</Link>
                     <Link to="/category" className="cursor-pointer">GALLERY</Link>
                     <Link to="/contact" className="cursor-pointer">CONTACT</Link>
                 </ul>
