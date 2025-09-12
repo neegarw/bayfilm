@@ -5,7 +5,7 @@ function ScrollUp() {
         <>
             <div
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className='fixed md:bottom-[50px] bottom-4 md:right-[50px] right-4 bg-[#138082] text-white p-3 rounded-full cursor-pointer hover:bg-[#143432] hover:text-white transition ease-in-out duration-300 shadow-2xl'>
+                className='fixed md:bottom-[50px] bottom-4 md:right-[50px] right-4 bg-[#FF5E00] text-white p-3 rounded-full cursor-pointer hover:bg-[#863100] hover:text-white transition ease-in-out duration-300 shadow-2xl'>
                 <IoCaretUp />
             </div>
         </>

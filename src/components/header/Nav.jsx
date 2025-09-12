@@ -9,7 +9,7 @@ function Nav({ setScrollToAbout }) {
     return (
         <>
             {/* Header */}
-            <nav className="flex items-center justify-between w-full py-4 bg-transparent text-[#FFF6C3] px-4 md:px-[100px]">
+            <nav className="flex relative z-50 items-center justify-between w-full py-4 bg-transparent text-[#FFF6C3] px-4 md:px-[100px]">
                 {/* Logo */}
                 <div className="">
                     <Link to="/" className="text-[30px] md:text-[48px] font-bold">
